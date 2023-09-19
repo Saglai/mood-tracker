@@ -7,7 +7,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let mood of moodList">
+        <tr *ngFor="let mood of moodPosts">
             <td> {{ mood.createdDate | date}} </td>
             <td> {{ mood.moodType | mood}} </td>
             <td> {{ mood.note }}</td>

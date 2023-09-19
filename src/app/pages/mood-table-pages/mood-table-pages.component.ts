@@ -8,16 +8,16 @@ import { MoodService } from 'src/app/services/mood-service.service';
   styleUrls: ['./mood-table-pages.component.css']
 })
 export class MoodTablePagesComponent implements OnInit {
-  moodList!: MoodModel[]
+  moodPosts!: MoodModel[]
 
   constructor(private moodService: MoodService) {}
 
   ngOnInit() {
-    this.getMoodList();
+    this.getMoodPosts();
   }
 
-  getMoodList() {
+  getMoodPosts() {
     this.moodService.getMoodPosts()
-      .subscribe(moodList => this.moodList = moodList);
+      .subscribe(moodPosts => this.moodPosts = moodPosts);
   }
 }
