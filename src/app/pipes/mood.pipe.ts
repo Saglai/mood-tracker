@@ -5,7 +5,7 @@ import { MoodTypeModel } from "../models/mood.model";
     name: 'mood'
 })
 export class MoodPipe implements PipeTransform {
-    transform(value: MoodTypeModel, ...args: any[]) {
+    transform(value?: MoodTypeModel, ...args: any[]) {
         switch(value) {
             case MoodTypeModel.terrible:
                 return 'terrible';
@@ -21,6 +21,8 @@ export class MoodPipe implements PipeTransform {
                 return 'great';
             case MoodTypeModel.amazing:
                 return 'amazing';
+            case undefined:
+                return undefined
         }
     }
 }

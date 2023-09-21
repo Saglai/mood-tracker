@@ -1,1 +1,6 @@
-<p>mood-widget works!</p>
+<div class="widget-container">
+    <div><strong>Latest Post</strong></div>
+    <div> {{ latestMood?.createdDate | date }}</div>
+    <div class="mood-type"> <strong>Mood type:</strong> {{ latestMood?.moodType | mood }}</div>
+    <div class="mood-note"> <strong>Note:</strong> {{ latestMood?.note }}</div>
+</div>

@@ -7,18 +7,21 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class MoodService {
-  private url = 'https://2d5b-176-208-12-101.ngrok-free.app/api/mood';
+  private moodUrl = 'https://2d5b-176-208-12-101.ngrok-free.app/api/mood';
+  private affirmationUrl = 'https://api.adviceslip.com/advice';
+  private headers = new HttpHeaders().set('ngrok-skip-browser-warning', 'true');
 
   constructor(private http: HttpClient) { }
 
   getMoodPosts(): Observable<MoodModel[]> {
-    const headers = new HttpHeaders()
-      .set('ngrok-skip-browser-warning', 'true');
-      
-    return this.http.get<MoodModel[]>(this.url, { headers: headers });
+    return this.http.get<MoodModel[]>(this.moodUrl, { headers: this.headers });
   }
 
-  getLatestMoodPost() {
+  getLatestMoodPost(): Observable<MoodModel> {
+    return this.http.get<MoodModel>(`${this.moodUrl}/latest`, { headers: this.headers });
+  }
 
+  getRandomAdvice() {
+    return this.http.get(this.affirmationUrl);
   }
 }
