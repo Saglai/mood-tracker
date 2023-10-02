@@ -1,0 +1,14 @@
+button {
+    border: 1px solid teal;
+    border-radius: 4px;
+    width: 50px;
+    height: 40px;
+    margin-top: 15px;
+    color: teal;
+    font-size: large;
+}
+
+button:hover {
+    cursor: pointer;
+}
+

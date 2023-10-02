@@ -1,0 +1,21 @@
+<p>add-mood-page works!</p>
+<div class="container">
+    <div class="mood-title">Mood</div>
+    <form class="form-container" [formGroup]="form">
+        <select formControlName="mood">
+            <option *ngFor="let mood of moodTypes" [ngValue]="mood">
+                {{ mood.name }}
+            </option>
+        </select>
+        
+        <textarea formControlName="note"></textarea>
+    </form>
+</div> 
+
+<div class="buttons">
+    <button>Cancel</button>
+    <button>Save</button>
+</div>
+
+
+<p>Form value: {{ form.value | json }}</p>

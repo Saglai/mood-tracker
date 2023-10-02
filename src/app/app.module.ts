@@ -11,6 +11,8 @@ import { MoodTablePagesComponent } from './pages/mood-table-pages/mood-table-pag
 import { MoodPostsComponent } from './components/mood-posts/mood-posts.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MoodPipe } from './pipes/mood.pipe';
+import { AddMoodPageComponent } from './pages/add-mood-page/add-mood-page.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,12 +23,14 @@ import { MoodPipe } from './pipes/mood.pipe';
     HeaderComponent,
     MoodTablePagesComponent,
     MoodPostsComponent,
-    MoodPipe
+    MoodPipe,
+    AddMoodPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
