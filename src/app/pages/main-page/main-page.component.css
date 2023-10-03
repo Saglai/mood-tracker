@@ -6,6 +6,7 @@ button {
     margin-top: 15px;
     color: teal;
     font-size: large;
+    background-color: #fff;
 }
 
 button:hover {

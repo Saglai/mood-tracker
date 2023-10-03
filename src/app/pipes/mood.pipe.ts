@@ -12,7 +12,7 @@ export class MoodPipe implements PipeTransform {
             case MoodTypeModel.bad:
                 return 'bad';
             case MoodTypeModel.notgood:
-                return 'notgood';
+                return 'not good';
             case MoodTypeModel.normal:
                 return 'normal';
             case MoodTypeModel.good:

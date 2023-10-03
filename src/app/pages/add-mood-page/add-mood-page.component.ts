@@ -47,7 +47,6 @@ export class AddMoodPageComponent {
     newMoodPost.moodType = this.form.value.mood as MoodTypeModel;
     newMoodPost.note = this.form.value.note.toString();
 
-    console.log(newMoodPost);
-    return newMoodPost
+    return newMoodPost;
   }
 }
