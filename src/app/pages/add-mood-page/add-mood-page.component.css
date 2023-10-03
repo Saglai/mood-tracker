@@ -1,21 +1,55 @@
 .container {
+    width: 500px;
+    height: 350px;
+    border: 1px solid teal;
+    border-radius: 8px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-title {
+    color: teal;
 }
 
 .form-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    margin-top: 15px;
+    width: 310px;
+    height: 200px;
 }
 
 form {
+    display: flex;
+    flex-direction: column;
     margin-left: 10px;
 }
 
-textarea {
-    margin-top: 10px;
+select {
+    width: 250px;
+    margin-top: 2px;
 }
 
-.mood-title, .note-title {
+textarea {
+    margin-top: 15px;
+    height: 150px;
+}
+
+.mood-title {
+    margin: 0;
     color: teal;
+}
+
+.buttons-container {
+    margin-top: 10px;
+    align-self: flex-end;
+    width: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.test {
+    margin-top: 30px;
 }

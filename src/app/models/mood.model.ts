@@ -15,3 +15,8 @@ export enum MoodTypeModel {
     great = 6,
     amazing = 7
 }
+
+export class AddMoodModel {
+    moodType!: MoodTypeModel;
+    note!: string;
+}

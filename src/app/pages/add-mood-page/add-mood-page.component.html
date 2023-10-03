@@ -1,21 +1,25 @@
 <p>add-mood-page works!</p>
 <div class="container">
-    <div class="mood-title">Mood</div>
-    <form class="form-container" [formGroup]="form">
-        <select formControlName="mood">
-            <option *ngFor="let mood of moodTypes" [ngValue]="mood">
-                {{ mood.name }}
-            </option>
-        </select>
-        
-        <textarea formControlName="note"></textarea>
-    </form>
-</div> 
+    <h3 class="form-title">Add a new mood post</h3>
+    <div class="form-container">
+        <h3 class="mood-title">Mood</h3>
 
-<div class="buttons">
-    <button>Cancel</button>
-    <button>Save</button>
+        <form [formGroup]="form">
+            <select formControlName="mood">
+                <option *ngFor="let mood of moodTypes" [ngValue]="mood">
+                    {{ mood |  mood }}
+                </option>
+            </select>
+    
+            <textarea formControlName="note" placeholder="Note..."></textarea>
+            
+            <div class="buttons-container">
+                <button class="cancal-btn" (click)="goBack()">Cancel</button>
+                <button class="save-btn" (click)="addMoodPost()">Save</button>
+            </div>
+        </form>
+    </div>
+
+    <p class="test">Form value: {{ form.value | json }}</p>
 </div>
 
-
-<p>Form value: {{ form.value | json }}</p>

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { MoodModel } from '../models/mood.model';
+import { AddMoodModel, MoodModel } from '../models/mood.model';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -23,5 +23,9 @@ export class MoodService {
 
   getRandomAdvice() {
     return this.http.get(this.affirmationUrl);
+  }
+
+  addMoodPost(newMoodPost: AddMoodModel): Observable<any> {
+    return this.http.post<AddMoodModel>(this.moodUrl, newMoodPost);
   }
 }
