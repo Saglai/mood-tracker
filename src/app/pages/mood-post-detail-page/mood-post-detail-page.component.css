@@ -1,0 +1,19 @@
+.container {
+    margin-left: 15px;
+    width: 500px;
+    border: 1px solid teal;
+    height: 350px;
+    padding: 15px;
+}
+
+.title {
+    color: teal;
+}
+
+.main-title {
+    margin-top: 0;
+}
+
+.details {
+    margin-top: 10px;
+}
