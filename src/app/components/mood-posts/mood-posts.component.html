@@ -1,4 +1,4 @@
-<table>
+<table class="mood-list">
     <thead>
         <tr>
             <th>Date</th>
@@ -7,7 +7,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let mood of moodPosts">
+        <tr class="mood-item" *ngFor="let mood of moodPosts" routerLink="/mood-table/{{mood.id}}">
             <td> {{ mood.createdDate | date}} </td>
             <td> {{ mood.moodType | mood}} </td>
             <td> {{ mood.note }}</td>

@@ -8,3 +8,11 @@ th, td {
     padding: 15px;
     text-align: center;
 }
+
+.mood-item {
+    cursor: pointer;
+}
+
+table.mood-list tr:hover td {
+    background-color: gainsboro;
+}
