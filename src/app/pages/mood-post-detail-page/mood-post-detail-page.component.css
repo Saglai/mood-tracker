@@ -1,8 +1,10 @@
 .container {
     margin-left: 15px;
     width: 500px;
+}
+
+.details-container {
     border: 1px solid teal;
-    height: 350px;
     padding: 15px;
 }
 
@@ -16,4 +18,8 @@
 
 .details {
     margin-top: 10px;
+}
+
+.btn {
+    margin-top: 15px;
 }

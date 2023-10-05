@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MoodModel } from 'src/app/models/mood.model';
 import { MoodService } from 'src/app/services/mood-service.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-mood-post-detail-page',
@@ -13,7 +14,8 @@ export class MoodPostDetailPageComponent implements OnInit {
 
   constructor(
     private moodService: MoodService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private location: Location
   ) {}
 
   ngOnInit() {
@@ -24,5 +26,9 @@ export class MoodPostDetailPageComponent implements OnInit {
     const id = String(this.route.snapshot.paramMap.get('id'));
     this.moodService.getMoodPostById(id)
       .subscribe(post => this.post = post);
+  }
+
+  goBack() {
+    this.location.back()
   }
 }

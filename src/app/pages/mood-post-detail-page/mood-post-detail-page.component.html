@@ -1,6 +1,11 @@
 <div class="container">
-    <h4 class="title main-title">Post information</h4>
-    <div class="details"><span class="title">Mood type:</span> {{ post.moodType | mood }} </div>
-    <div class="details"><span class="title">Date: </span> {{ post.createdDate | date }} </div>
-    <div class="details"><span class="title">Note:</span> {{ post.note }} </div>
+    <div class="details-container">
+        <h4 class="title main-title">Post information</h4>
+        <div class="details"><span class="title">Mood type:</span> {{ post.moodType | mood }} </div>
+        <div class="details"><span class="title">Date: </span> {{ post.createdDate | date }} </div>
+        <div class="details"><span class="title">Note:</span> {{ post.note }} </div>
+    </div>
+    
+    <button class="btn" (click)="goBack()">Back</button>
 </div>
+
