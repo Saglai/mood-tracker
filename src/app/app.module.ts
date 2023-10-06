@@ -8,7 +8,7 @@ import { MoodWidgetComponent } from './components/mood-widget/mood-widget.compon
 import { TextBannerComponent } from './components/text-banner/text-banner.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { MoodTablePagesComponent } from './pages/mood-table-pages/mood-table-pages.component';
-import { MoodPostsComponent } from './components/mood-posts/mood-posts.component';
+import { TableComponent } from './components/table/table.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MoodPipe } from './pipes/mood.pipe';
 import { AddMoodPageComponent } from './pages/add-mood-page/add-mood-page.component';
@@ -23,7 +23,7 @@ import { MoodPostDetailPageComponent } from './pages/mood-post-detail-page/mood-
     TextBannerComponent,
     HeaderComponent,
     MoodTablePagesComponent,
-    MoodPostsComponent,
+    TableComponent,
     MoodPipe,
     AddMoodPageComponent,
     MoodPostDetailPageComponent
