@@ -13,11 +13,15 @@ th, td {
     cursor: pointer;
 }
 
-table.mood-list tr:hover td {
+table.list tr:hover td {
     background-color: gainsboro;
 }
 
 svg {
     width: 10px; 
     height: 10px;
+}
+
+.col-title:hover {
+    cursor: pointer;
 }
