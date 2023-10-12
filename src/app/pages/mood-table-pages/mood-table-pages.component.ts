@@ -9,6 +9,7 @@ import { MoodService } from 'src/app/services/mood-service.service';
 })
 export class MoodTablePagesComponent implements OnInit {
   moodPosts!: MoodModel[]
+  searchValue = '';
 
   constructor(private moodService: MoodService) {}
 
@@ -19,5 +20,14 @@ export class MoodTablePagesComponent implements OnInit {
   getMoodPosts() {
     this.moodService.getMoodPosts()
       .subscribe(moodPosts => this.moodPosts = moodPosts);
+  }
+
+  search() {
+    this.moodPosts = this.moodPosts.filter(mood => mood.note.includes(this.searchValue));
+  }
+
+  clear() {
+    this.getMoodPosts();
+    this.searchValue = '';
   }
 }

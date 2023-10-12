@@ -4,8 +4,9 @@
         <select name="" id=""></select>
     </div>
     <div class="search-container">
-        <input class="search-box" type="text" name="" id="">
-        <button>Search</button>
+        <input class="search-box" type="text" [(ngModel)]="searchValue" >
+        <button (click)="search()">Search</button>
+        <button (click)="clear()">Clear</button>
     </div>
 </div>
 

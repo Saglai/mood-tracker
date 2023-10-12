@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class MoodService {
-  private moodUrl = 'https://3698-95-156-71-146.ngrok-free.app/api/mood';
+  private moodUrl = 'https://0eff-95-156-71-146.ngrok-free.app/api/mood';
   private adviceTextUrl = 'https://api.adviceslip.com/advice';
   private headers = new HttpHeaders().set('ngrok-skip-browser-warning', 'true');
 
